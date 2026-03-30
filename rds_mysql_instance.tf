@@ -5,9 +5,9 @@ resource "aws_db_instance" "rds-db" {
   engine_version = "5.7.21"
   instance_class = "db.t2.small"
   name = "mydb"
-  username = "db-user"
-  password = "db-password"
-  publicly_accessible = true
+  username = var.db_username
+  password = var.db_password
+  publicly_accessible = false
   vpc_security_group_ids = ["rds_security_group_id"]
   skip_final_snapshot = true
 }

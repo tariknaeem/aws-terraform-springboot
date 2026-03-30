@@ -16,11 +16,11 @@ resource "aws_elastic_beanstalk_environment" "ebs-env" {
   }
 
   setting {
-    "namespace" = "aws:elasticbeanstalk:application:environment""name" = "SPRING_DATASOURCE_USERNAME""value" = "db-username"
+    "namespace" = "aws:elasticbeanstalk:application:environment""name" = "SPRING_DATASOURCE_USERNAME""value" = var.db_username
   }
 
   setting {
-    "namespace" = "aws:elasticbeanstalk:application:environment""name" = "SPRING_DATASOURCE_PASSWORD""value" = "db-password"
+    "namespace" = "aws:elasticbeanstalk:application:environment""name" = "SPRING_DATASOURCE_PASSWORD""value" = var.db_password
   }
 
 }

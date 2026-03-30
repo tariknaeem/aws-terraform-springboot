@@ -1,0 +1,5 @@
+# Copy this to terraform.tfvars and fill in real values
+# terraform.tfvars is gitignored and will not be committed
+
+db_username = ""
+db_password = ""
